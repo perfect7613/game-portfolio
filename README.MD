@@ -1,31 +1,14 @@
-# Developer portfolio that's a 2D game
+# Developer Portfolio as a 2D Game
 
-Inspired by the many creative 3D developer portfolios, I create one that's 2D instead.
-This is meant as a template that you can use to build your own. It works on both desktop
-and mobile.
+This is a developer portfolio created as a 2D game using Kaboom.js. It provides a unique and interactive way to showcase your skills.
 
-![A screenshot of the project](./developerportfoliothumbnail.png)
+## Getting Started
+To run the game locally, follow these steps:
 
-Live Demo : https://jslegenddev.github.io/portfolio/
+1. Clone the repository: `git clone https://github.com/perfect7613/game-portfolio.git`
+2. Install the dependencies: `npm install`
+3. Start the game: `npm run dev`
 
-Watch the tutorial I made on how to build this on YouTube : https://www.youtube.com/watch?v=gwtfWORCN0U
+For more detailed instructions and documentation, please refer to the [Kaboom.js documentation](https://kaboomjs.com/).
 
-I used a modified version of this original tileset (Giving credit where it's due) : https://momen-games.itch.io/happy-la-v2-ts
 
-# How to run
-
-Note: You need `Node.js` and `npm` installed on your machine.
-
-`npm install` then `npm run dev`
-
-# How to build
-
-`npm run build` and a dist folder should be created.
-
-# How to preview the build
-
-`npm run preview`
-
-# How to host?
-
-Here is a [guide](HOW_TO_DEPLOY.MD).
