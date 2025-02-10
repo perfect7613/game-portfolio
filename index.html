@@ -1,132 +1,124 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/Image.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amey | Creative Developer</title>
-    <meta name="description" content="Amey is a creative developer specializing in web development and design. Explore the portfolio and projects of Amey.">
-    <meta name="keywords" content="Amey, Creative Developer, Web Development, Web Design, Portfolio, Amey Muke">
-    <meta name="author" content="Amey Muke">
-    <meta property="og:title" content="Amey | Creative Developer">
-    <meta property="og:description" content="Amey is a creative developer specializing in web development and design. Explore the portfolio and projects of Amey.">
-    <meta property="og:image" content="/Image.svg">
-    <meta property="og:url" content="https://www.ameymuke.dev">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="canonical" href="https://www.ameymuke.dev">
-  </head>
-  <body>
-    <style>
-      @font-face {
-        font-family: monogram;
-        src: url(monogram.ttf);
-      }
 
-      body {
-        font-family: monogram, monospace;
-        font-size: clamp(2.2rem, 4.5vw, 2.4rem);
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-        letter-spacing: 0.1em;
-        line-height: 1.4;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/Image.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amey | Creative Developer</title>
+  <meta name="description"
+    content="Amey is a creative developer specializing in web development and design. Explore the portfolio and projects of Amey.">
+  <meta name="keywords" content="Amey, Creative Developer, Web Development, Web Design, Portfolio, Amey Muke">
+  <meta name="author" content="Amey Muke">
+  <meta property="og:title" content="Amey | Creative Developer">
+  <meta property="og:description"
+    content="Amey is a creative developer specializing in web development and design. Explore the portfolio and projects of Amey.">
+  <meta property="og:image" content="/Image.svg">
+  <meta property="og:url" content="https://www.ameymuke.dev">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://www.ameymuke.dev">
+</head>
 
-      #app {
-        width: 100%;
-        height: 100vh;
-        position: relative;
-      }
+<body>
+  <style>
+    @font-face {
+      font-family: monogram;
+      src: url(monogram.ttf);
+    }
 
-      #textbox {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 2vh;
-        width: 90%;
-        max-width: 800px;
-        min-height: 10vh;
-        background: white;
-        border-radius: 3px;
-        outline-style: solid;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        word-spacing: 0.2rem;
-        filter: drop-shadow(0 0 0.75rem rgb(112, 112, 112));
-      }
+    body {
+      font-family: monogram, monospace;
+      font-size: 2rem;
+      overflow: hidden;
+    }
 
-      .ui-text {
-        margin: 0;
-        user-select: none;
-        font-size: clamp(1rem, 3vw, 1.5rem);
-      }
+    #app {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
 
-      .ui-close-btn {
-        font-family: monogram, monospace;
-        border-style: none;
-        border-radius: 3px;
-        padding: 0.5rem 1rem;
-        font-size: clamp(1rem, 3vw, 1.5rem);
-        cursor: pointer;
-      }
+    #textbox {
+      position: absolute;
+      left: 10%;
+      right: 10%;
+      bottom: 2vh;
+      min-height: 10vh;
+      background: white;
+      border-radius: 3px;
+      outline-style: solid;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      word-spacing: 0.2rem;
+      filter: drop-shadow(0 0 0.75rem rgb(112, 112, 112));
+      /* overflow: auto; */
+    }
 
-      .btn-container {
-        align-self: flex-end;
-        margin-top: 1rem;
-      }
+    .ui-text {
+      margin: 0;
+      user-select: none;
+    }
 
-      .note {
-        position: absolute;
-        left: 5%;
-        top: 1vh;
-        display: flex;
-        flex-direction: column;
-        color: rgb(238, 238, 238);
-        font-size: clamp(1rem, 3vw, 1.5rem);
-      }
+    .ui-close-btn {
+      font-family: monogram, monospace;
+      border-style: none;
+      border-radius: 3px;
+      padding: 1rem;
+      font-size: inherit;
+    }
 
+    .btn-container {
+      align-self: flex-end;
+      margin-top: 1rem;
+    }
+
+    elevenlabs-convai {
+      position: fixed;
+      right: 20px;
+      top: 20px;
+      z-index: 1000;
+      visibility: hidden;
+    }
+
+    @media (min-width: 768px) {
       elevenlabs-convai {
-        position: fixed;
-        right: 20px;
-        top: 20px;
-        z-index: 1000;
-        visibility: hidden;
+        top: auto;
+        bottom: 20px;
+        visibility: visible;
       }
+    }
 
-      @media (min-width: 768px) {
-        elevenlabs-convai {
-          top: auto;
-          bottom: 20px;
-          visibility: visible;
-        }
-      }
+    .note {
+      position: absolute;
+      left: 5%;
+      top: 1vh;
+      display: flex;
+      flex-direction: column;
+      color: rgb(238, 238, 238);
+    }
+  </style>
+  <div id="app">
+    <div>
+      <p class="note">Tap/Click around to move</p>
 
-      #game {
-        width: 100%;
-        height: 100%;
-      }
-    </style>
-    <div id="app">
-      <div>
-        <p class="note">Tap/Click around to move</p>
-
-        <div id="textbox-container" style="display: none">
-          <div id="textbox">
-            <p id="dialogue" class="ui-text"></p>
-            <div class="btn-container">
-              <button id="close" class="ui-close-btn">Close</button>
-            </div>
+      <div id="textbox-container" style="display: none">
+        <div id="textbox">
+          <p id="dialogue" class="ui-text"></p>
+          <div class="btn-container">
+            <button id="close" class="ui-close-btn">Close</button>
           </div>
         </div>
       </div>
-      <canvas id="game"></canvas>
     </div>
-    <elevenlabs-convai agent-id="kpIDsyyKWJAi2irHWVvZ"></elevenlabs-convai>
-    <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
-    <script type="module" src="src/main.js"></script>
-  </body>
+    <canvas id="game"></canvas>
+  </div>
+  <elevenlabs-convai agent-id="kpIDsyyKWJAi2irHWVvZ"></elevenlabs-convai>
+  <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+  <script type="module" src="src/main.js"></script>
+</body>
+
 </html>
